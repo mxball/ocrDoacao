@@ -8,17 +8,26 @@
 		<h1>Doação de Notas Fiscais</h1>
 		<form action="/cadastra" method="post" class="form">
 			<ul>
+			<c:forEach items="${errors}" var="error">
+				<li>${error.message}</li>
+			</c:forEach>	
+			</ul>
+			<ul>
 				<li>
-					CNPJ: <input type="text" id="cnpj" name="notafiscal.cnpj">
+					CNPJ: <input type="text" id="cnpj" name="notafiscal.cnpj"
+						value="${notafiscal.cnpj}">
 				</li>
 				<li>
-					COO: <input type="text" id="coo" name="notafiscal.coo">
+					COO: <input type="text" id="coo" name="notafiscal.coo"
+						value="${notafiscal.coo}">
 				</li>
 				<li>
-					Valor: <input type="text" id="valor" name="notafiscal.valor">
+					Valor: <input type="text" id="valor" name="notafiscal.valor"
+						value="${notafiscal.valor}">
 				</li>
 				<li>
-					Data: <input type="text" id="data" name="notafiscal.data">
+					Data: <input type="text" id="data" name="notafiscal.data"
+						value="${notafiscal.data}">
 				</li>
 				     <button type="submit">Enviar</button>
 			</ul>

@@ -1,7 +1,8 @@
 package br.com.ime.ocrDoacao.model;
 
-import java.text.ParseException;
+
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -62,10 +63,25 @@ public class NotaFiscal {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/M/yyyy");
 		try {
 			this.data = sdf.parse(data);
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		} catch (Exception e) {
+			this.data = null;
 		}
+	}
+	
+	public boolean validaCnpj() {
+		return cnpj == null || cnpj.length() != 11;
+	}
+	
+	public boolean validaCoo() {
+		return coo == null || coo.length() != 6;
+	}
+	
+	public boolean validaValor() {
+		return valor <= 0.0;
+	}
+	
+	public boolean validaData() {
+		return data == null || data.after(Calendar.getInstance().getTime());
 	}
 }
 
