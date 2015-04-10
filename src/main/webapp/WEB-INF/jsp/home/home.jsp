@@ -6,17 +6,21 @@
 <body>
 	<main>
 		<h1>Doação de Notas Fiscais</h1>
-		<form action="doacao" method="post" class="form">
+		<form action="/cadastra" method="post" class="form">
 			<ul>
 				<li>
-					Numero da nota: <input type="text">
+					CNPJ: <input type="text" id="cnpj" name="notafiscal.cnpj">
 				</li>
 				<li>
-					COO: <input type="text">
+					COO: <input type="text" id="coo" name="notafiscal.coo">
 				</li>
 				<li>
-					Valor: <input type="text">
+					Valor: <input type="text" id="valor" name="notafiscal.valor">
 				</li>
+				<li>
+					Data: <input type="text" id="data" name="notafiscal.data">
+				</li>
+				     <button type="submit">Enviar</button>
 			</ul>
 		</form>
 	</main>
