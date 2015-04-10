@@ -33,6 +33,11 @@ public class HomeController {
 		result.redirectTo(HomeController.class).home();
 	}
 	
+	@Get("/notaFiscal")
+	public void nota() {
+		result.forwardTo("/WEB-INF/jsp/img.jsp");
+	}
+	
 	private void validaNotaFiscal(NotaFiscal notafiscal) {
 		if (notafiscal.validaCnpj())
 			validator.add(new ValidationMessage("CNPJ inválido. Use apenas números", 
@@ -48,5 +53,5 @@ public class HomeController {
 					"notafiscal.data"));
 		validator.onErrorUsePageOf(HomeController.class).home();
 	}
-
+	
 }

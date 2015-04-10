@@ -1,0 +1,37 @@
+body{
+	position:relative;
+	widht:800px;
+	height: 600px	;
+}
+
+h1{
+	position: relative;
+	text-align: center;
+}
+
+input{
+	margin-left: 15px;
+	float: right;
+	text-align: right;
+}
+
+input[type=submit]{
+	font-size:  20px;
+}
+
+li{
+	clear: both;
+	display: block;
+	width: 400px;
+	margin: 0 0 20px 10px;
+	font-size: 25px;
+}
+
+.formDoacao input[type=text]:focus, .formulario textarea:focus {
+	background-color: #eeeeee;
+}
+
+#notaFiscal{
+	position: absolute;
+	left:700px;
+}
