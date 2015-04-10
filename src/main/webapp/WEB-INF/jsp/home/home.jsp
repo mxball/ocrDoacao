@@ -6,7 +6,8 @@
 <body>
 	<main>
 		<h1>Doação de Notas Fiscais</h1>
-		<form action="/cadastra" method="post" class="form">
+		<img id="notaFiscal" src="/imgs/CupomFiscal.jpg">
+		<form class="formDoacao" action="/cadastra" method="post" class="form">
 			<ul>
 				<li>
 					CNPJ: <input type="text" id="cnpj" name="notafiscal.cnpj">

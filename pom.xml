@@ -49,6 +49,21 @@
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.2</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>4.2.7.SP1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium.client-drivers</groupId>
+			<artifactId>selenium-java-client-driver</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		
+		
+		
 
 		<!-- JSP -->
 		<dependency>

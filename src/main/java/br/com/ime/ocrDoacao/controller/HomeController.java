@@ -30,5 +30,9 @@ public class HomeController {
 		result.redirectTo(HomeController.class).home();
 	}
 	
+	@Get("/notaFiscal")
+	public void nota() {
+		result.forwardTo("/WEB-INF/jsp/img.jsp");
+	}
 
 }
