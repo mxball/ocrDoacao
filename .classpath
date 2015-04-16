@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
   <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
   <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
   <classpathentry kind="output" path="src/main/webapp/WEB-INF/classes"/>
@@ -41,8 +42,10 @@
   <classpathentry kind="var" path="M2_REPO/org/hibernate/hibernate-validator/4.3.0.Final/hibernate-validator-4.3.0.Final.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/hibernate/hibernate-entitymanager/4.3.7.Final/hibernate-entitymanager-4.3.7.Final.jar"/>
   <classpathentry kind="var" path="M2_REPO/mysql/mysql-connector-java/5.1.34/mysql-connector-java-5.1.34.jar"/>
-  <classpathentry kind="var" path="M2_REPO/br/com/caelum/vraptor/vraptor-jpa/4.0.0.Final/vraptor-jpa-4.0.0.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/br/com/caelum/vraptor/vraptor-jpa/1.0.2/vraptor-jpa-1.0.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/persistence/javax.persistence/2.0.0/javax.persistence-2.0.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/commons-fileupload/commons-fileupload/1.2/commons-fileupload-1.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/client-drivers/selenium-java-client-driver/1.0.2/selenium-java-client-driver-1.0.2.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/glassfish/web/javax.servlet.jsp/2.2.3/javax.servlet.jsp-2.2.3.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/glassfish/web/javax.el/2.2.3/javax.el-2.2.3.jar"/>
   <classpathentry kind="var" path="M2_REPO/junit/junit/4.8.2/junit-4.8.2.jar"/>
