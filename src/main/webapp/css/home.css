@@ -35,3 +35,7 @@ li{
 	position: absolute;
 	left:700px;
 }
+
+.hidden {
+	display: none;
+}

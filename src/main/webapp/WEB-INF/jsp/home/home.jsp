@@ -14,6 +14,9 @@
 			</c:forEach>	
 			</ul>
 			<ul>
+				<li class="hidden">
+					<input type="text" value="${id}" name="notafiscal.instituicaoId">
+				</li>
 				<li>
 					CNPJ: <input type="text" id="cnpj" name="notafiscal.cnpj"
 						value="${notafiscal.cnpj}">
