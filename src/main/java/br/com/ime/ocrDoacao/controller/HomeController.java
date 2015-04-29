@@ -56,7 +56,7 @@ public class HomeController {
 	
 	private void validaNotaFiscal(NotaFiscal notafiscal) {
 		if (notafiscal.validaCnpj()) {
-			validator.add(new ValidationMessage("CNPJ inválido. Use apenas números", 
+			validator.add(new ValidationMessage("CNPJ inválido.", 
 					"notafiscal.cnpj"));
 		}
 		if (notafiscal.validaCoo()) {
@@ -71,6 +71,7 @@ public class HomeController {
 			validator.add(new ValidationMessage("Data de emissão inválida.", 
 					"notafiscal.data"));
 		}
+		
 	}
 	
 	private void decideInstituicao(int id) {
