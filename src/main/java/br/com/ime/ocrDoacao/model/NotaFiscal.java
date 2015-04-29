@@ -18,6 +18,7 @@ public class NotaFiscal {
 	private String coo;
 	private float valor;
 	private Date data;
+	private int instituicaoId;
 	
 	public NotaFiscal() {
 		
@@ -84,5 +85,14 @@ public class NotaFiscal {
 	public boolean validaData() {
 		return data == null || data.after(Calendar.getInstance().getTime());
 	}
+
+	public int getInstituicaoId() {
+		return instituicaoId;
+	}
+
+	public void setInstituicaoId(int instituicaoId) {
+		this.instituicaoId = instituicaoId;
+	}
+	
 }
 

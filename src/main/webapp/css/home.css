@@ -36,7 +36,12 @@ li{
 	left:700px;
 }
 
+.hidden {
+	display: none;
+}
+
 .validation_error{
 	color: red;
 	font-size: 10px;
 }
+
