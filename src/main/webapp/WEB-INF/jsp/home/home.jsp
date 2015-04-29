@@ -10,7 +10,10 @@
 		<form class="formDoacao" action="/cadastra" method="post" class="form">
 			<ul>
 			<c:forEach items="${errors}" var="error">
-				<li>${error.message}</li>
+				<li class="validation_error">${error.message}</li>
+				<c:if test = "${error.category == 'notafiscal.cnpj'}">
+					
+				</c:if>
 			</c:forEach>	
 			</ul>
 			<ul>

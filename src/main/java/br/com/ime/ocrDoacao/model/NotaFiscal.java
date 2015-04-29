@@ -48,6 +48,7 @@ public class NotaFiscal {
 	}
 	
 	public void setCnpj(String cnpj) {
+		cnpj = cnpj.replaceAll("[-/.]", "");
 		this.cnpj = cnpj;
 	}
 	
@@ -60,7 +61,7 @@ public class NotaFiscal {
 	}
 	
 	public void setData(String data) {
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/M/yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		try {
 			this.data = sdf.parse(data);
 		} catch (Exception e) {
@@ -69,7 +70,7 @@ public class NotaFiscal {
 	}
 	
 	public boolean validaCnpj() {
-		return cnpj == null || cnpj.length() != 11;
+		return cnpj == null || cnpj.length() != 14;
 	}
 	
 	public boolean validaCoo() {

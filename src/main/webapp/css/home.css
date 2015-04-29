@@ -35,3 +35,8 @@ li{
 	position: absolute;
 	left:700px;
 }
+
+.validation_error{
+	color: red;
+	font-size: 10px;
+}

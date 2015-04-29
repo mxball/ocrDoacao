@@ -22,7 +22,7 @@ public class HomeController {
 	}
 	
 	@Get("/")
-	public void home() {
+	public void hometeste() {
 		System.out.println("Pagina Inicial");
 	}
 	
@@ -30,7 +30,7 @@ public class HomeController {
 	public void cadastra(NotaFiscal notafiscal) {
 		validaNotaFiscal(notafiscal);
 		dao.adicionaNotaFiscal(notafiscal);
-		result.redirectTo(HomeController.class).home();
+		result.redirectTo(HomeController.class).hometeste();
 	}
 	
 	@Get("/notaFiscal")
@@ -51,7 +51,7 @@ public class HomeController {
 		if (notafiscal.validaData())
 			validator.add(new ValidationMessage("Data de emissão inválida.", 
 					"notafiscal.data"));
-		validator.onErrorUsePageOf(HomeController.class).home();
+		validator.onErrorUsePageOf(HomeController.class).hometeste();
 	}
 	
 }
