@@ -33,7 +33,7 @@ img {
 .validation_error{
 	color: red;
 	font-size: 13px;
-	list-style-type: symbols(symbolic "*");
+	margin-top: 2px;
 }
 
 .hidden {

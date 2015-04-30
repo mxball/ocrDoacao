@@ -91,6 +91,7 @@
         <script src="/javascript/jquery.mask.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
+            	var erro = false;
             	$("#data").mask("00/00/0000");
             	$("#valor").mask("###0.00", { reverse: true });
                	$("#coo").mask("000000");
@@ -105,7 +106,10 @@
                			coo == null ||  coo == "" ||
                			cnpj == null || cnpj == "")
                		{
-               		 	$("#erro").prepend("<p class='validation_error'>* Todos os campos são obrigatórios</p>");
+               			if (!erro){
+               				erro = true;
+               				$("#erro").prepend("<p class='validation_error'>* Todos os campos são obrigatórios</p>");	
+               			}
                			e.preventDefault();
                		}
                	});
