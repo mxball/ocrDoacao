@@ -29,13 +29,6 @@
             </div>
             <div class="col">
                 <form role="form" action="/cadastra" method="post" class="form">
-                <ul>
-				<c:forEach items="${errors}" var="error">
-					<li class="validation_error">${error.message}</li>
-					<c:if test = "${error.category == 'notafiscal.cnpj'}">		
-					</c:if>
-				</c:forEach>	
-				</ul>
                     <fieldset>
                         <legend>Dados do cupom fiscal</legend>
                         <div class="hidden">
@@ -45,20 +38,42 @@
                             <label for="cnpj">CNPJ:</label>
                             <input type="text" class="form-control" id="cnpj" name="notafiscal.cnpj" placeholder=""
                              value="${notafiscal.cnpj}" >
+                            <c:forEach items="${errors}" var="error">
+                             	<c:if test = "${error.category == 'notafiscal.cnpj'}">
+	                             	<p class="validation_error">* ${error.message}</p>
+                            	</c:if>
+                            </c:forEach>
                         </div>
                         <div class="form-group">
                             <label for="coo">COO:</label>
                             <input type="text" class="form-control" id="coo" name="notafiscal.coo" value="${notafiscal.coo}" >
+                            <c:forEach items="${errors}" var="error">
+                            	<c:if test = "${error.category == 'notafiscal.coo'}">
+                             		<p class="validation_error">* ${error.message}</p>
+                             	</c:if>
+                            </c:forEach>
                         </div>
+                        
                         <div class="form-group">
                             <label for="valor">Valor:</label>
                             <input type="text" class="form-control" id="valor" name="notafiscal.valor" value="${notafiscal.valor}" >
+                            <c:forEach items="${errors}" var="error">
+                            	<c:if test = "${error.category == 'notafiscal.valor'}">
+                             		<p class="validation_error">* ${error.message}</p>
+                             	</c:if>
+                            </c:forEach>
                         </div>
                         <div class="form-group">
                             <label for="data">Data:</label>
                             <input type="text" class="form-control" id="data" name="notafiscal.data" value="${notafiscal.data}" >
+                        	<c:forEach items="${errors}" var="error">
+                            	<c:if test = "${error.category == 'notafiscal.data'}">
+                             		<p class="validation_error">* ${error.message}</p>
+                             	</c:if>
+                            </c:forEach>
                         </div>
-                        <button type="submit" class="btn btn-primary">Confirmar</button>
+                        <div id="erro" class="form-group"></div>
+                        <button type="submit" class="btn btn-primary"><b>Confirmar</b></button>
                     </fieldset>
                 </form>
             </div>
@@ -72,14 +87,28 @@
                 </fieldset>
             </div>
         </div>
-        <script src="/javascript/jquery-1.10.0.min.js"></script>
-        <script src="/javascript/jquery.inputmask.bundle.js"></script>
+        <script src="/javascript/jquery.min.js"></script>
+        <script src="/javascript/jquery.mask.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
-               $("#data").inputmask("99/99/9999");
-               $("#valor").inputmask({ mask: "9{1,3}.99", greedy: false });
-               $("#coo").inputmask("999999");
-               $("#cnpj").inputmask("99.999.999/9999-99");
+            	$("#data").mask("00/00/0000");
+            	$("#valor").mask("###0.00", { reverse: true });
+               	$("#coo").mask("000000");
+               	$("#cnpj").mask("00.000.000/0000-00");
+               	$("form").submit(function(e) {
+            		var data = $("#data").val();
+            		var valor = $("#valor").val();
+            		var coo = $("#coo").val();
+            		var cnpj = $("#cnpj").val();
+               		if (data == null || data == "" || 
+               			valor == null || valor == "" ||
+               			coo == null ||  coo == "" ||
+               			cnpj == null || cnpj == "")
+               		{
+               		 	$("#erro").prepend("<p class='validation_error'>* Todos os campos são obrigatórios</p>");
+               			e.preventDefault();
+               		}
+               	});
             });
         </script>
     </body>
