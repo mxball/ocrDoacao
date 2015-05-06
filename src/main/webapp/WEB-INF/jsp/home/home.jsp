@@ -24,7 +24,7 @@
                 <fieldset>
                     <legend>Cupom Fiscal</legend>
                     <!--<img id="notaFiscal" src="http://alimentar.org.br/wp-content/uploads/2012/11/cupom_fiscal_modelo.png">-->
-                    <img id="notaFiscal" src="http://videos.web-03.net/artigos/Daruma_Developer/Arredondamento_e_Truncamento_de_Itens/imagem001.jpg">
+                    <img id="notaFiscal" src="http://data.ime.usp.br${imagem.get("path")}">
                 </fieldset>
             </div>
             <div class="col">
