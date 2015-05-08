@@ -37,7 +37,8 @@ public class HomeController {
 	public void home() throws IOException, JSONException {
 		JSONObject json = readJsonFromUrl("http://data.ime.usp.br/ocr-web/example/list");
 		JSONArray array = json.getJSONArray("images");
-		result.include("imagem", array.get(0));
+		JSONObject jsonObject = array.getJSONObject(0);
+		result.include("path", jsonObject.getString("path"));
 	}
 
 	@Get("/aacd")

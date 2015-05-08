@@ -24,7 +24,7 @@
                 <fieldset>
                     <legend>Cupom Fiscal</legend>
                     <!--<img id="notaFiscal" src="http://alimentar.org.br/wp-content/uploads/2012/11/cupom_fiscal_modelo.png">-->
-                    <img id="notaFiscal" src="http://data.ime.usp.br${imagem.get("path")}">
+                    <img id="notaFiscal" src="http://data.ime.usp.br${path}">
                 </fieldset>
             </div>
             <div class="col">
